@@ -77,7 +77,7 @@ const Navbar = () => {
 
 
     return (
-        <div className=" shadow-sm py-4">
+        <div className=" shadow-sm py-8">
             <div className="max-w-screen-xl	 mx-auto md:px-2">
                 <div className="px-4 md:px-4 lg:px-4   bg-none z-30 relative ">
                     <div className="navbar flex justify-between items-center ">
@@ -85,22 +85,42 @@ const Navbar = () => {
                             <img className=" " src={img} alt="" />
 
                         </div>
-                        <div className="">
+                        <div  >
                             <div className="dropdown">
-                                <label tabIndex={1} className="btn btn-ghost lg:hidden flex-col ">
-                                    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                <label tabIndex={1} className="btn btn-ghost btn-circle avatar lg:hidden flex-col">
+                                    {
+                                        user ? <>
+                                            <div className="w-10 rounded-full flex items-center ">
+                                                <img src={user.photoURL == null ? 'https://i.ibb.co/2vkJbGD/images.png' : user.photoURL} alt="" />
+                                            </div>
+                                            {/* <p className="font-mono">{user.displayName == null ? 'MR' : user.displayName}</p> */}
+                                        </> :
+                                            <>
+
+                                            </>
+                                    }
+                                </label>
+                                <ul tabIndex={0} className=" menus menu-sm dropdown-content bg-white  py-6 border z-[10]   px-4  -left-20 ">
+
+                                    <div className="space-y-2">
                                         {
+
                                             user ? <>
-                                                <div className="w-10 rounded-full flex items-center ">
-                                                    <img src={user.photoURL == null ? 'https://i.ibb.co/2vkJbGD/images.png' : user.photoURL} alt="" />
-                                                </div>
-                                                {/* <p className="font-mono">{user.displayName == null ? 'MR' : user.displayName}</p> */}
+                                                <h1 className="text-center underline">Profile</h1>
+                                                <p className="font-mono py-2">{user.displayName == null ? 'MR XYZ' : user.displayName}</p>
+                                                <Link onClick={handelLogout} className="  px-4 font-medium text-white bg-red-400 border-2 rounded-full">
+                                                    Logout
+                                                </Link>
                                             </> :
                                                 <>
-
                                                 </>
                                         }
-                                    </label>
+                                    </div>
+                                </ul>
+                            </div>
+                            <div className="dropdown">
+
+                                <label tabIndex={1} className="btn btn-ghost lg:hidden flex-col ">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-[50px] text-black w-[50px]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                                 </label>
                                 <ul tabIndex={0} className=" menus menu-sm dropdown-content bg-white  py-6 border z-[10]   px-4  -left-20 ">
@@ -113,21 +133,18 @@ const Navbar = () => {
                                                 <p className="uppercase  px-3">{appliedJobs}</p>
                                                 <p className="uppercase px-3">{addAjobs}</p>
                                                 <p className="uppercase  px-3">{myJobs}</p>
-                                                <Link onClick={handelLogout} className="  px-4 rounded font-medium border-red-400 border-2 text-black md:ml-4 lg:ml-6">
-                                                    Logout
-                                                </Link>
+
                                             </> :
                                                 <>
 
-                                                    <Link to='/login' className="  px-4 rounded font-medium border-green-400 border-2 text-black md:ml-4 lg:ml-6">
+                                                    <Link to='/login' className="  px-4 font-medium bg-green-400 border-2 rounded-full text-white ">
                                                         Login
                                                     </Link>
                                                 </>
                                         }
                                     </li>
-                                    
-
                                 </ul>
+
                             </div>
                         </div>
                         <div className="navbar-center hidden lg:flex">
@@ -138,37 +155,57 @@ const Navbar = () => {
                                     <li className="">{blog}</li>
                                     {
                                         user && <><p className="">{appliedJobs}</p>
-                                        <p className="">{addAjobs}</p>
-                                        <p className="">{myJobs}</p></>
-                                            
-                                       
+                                            <p className="">{addAjobs}</p>
+                                            <p className="">{myJobs}</p></>
+
+
                                     }
                                 </div>
-                                
+
                                 {
                                     user ? <>
 
-                                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                                            {
-                                                user ? <>
-                                                    <div className="w-10 rounded-full flex items-center">
-                                                        <img src={user.photoURL == null ? 'https://i.ibb.co/2vkJbGD/images.png' : user.photoURL} alt="" />
-                                                    </div>
-                                                    {/* <p className="font-mono">{user.displayName == null ? 'MR' : user.displayName}</p> */}
-                                                </> :
-                                                    <>
+                                        <div className="dropdown">
+                                            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                                {
+                                                    user ? <>
+                                                        <div className="w-10 rounded-full flex items-center">
+                                                            <img src={user.photoURL == null ? 'https://i.ibb.co/2vkJbGD/images.png' : user.photoURL} alt="" />
+                                                        </div>
 
-                                                    </>
-                                            }
+                                                    </> :
+                                                        <>
 
-                                        </label>
-                                        <Link onClick={handelLogout} className=" py-2 px-4 rounded-full font-medium border-2 border-red-400  text-black md:ml-4 lg:ml-6">
-                                            Logout
-                                        </Link>
+                                                        </>
+                                                }
+                                            </label>
+                                            <ul tabIndex={0} className=" menus menu-sm dropdown-content bg-white  py-6 border z-[10]   px-4  -left-20 ">
+
+                                                <div className="space-y-2">
+                                                    {
+
+                                                        user ? <>
+                                                            <div className="flex-col items-center">
+                                                                <h1 className="text-center underline text-black">Profile</h1>
+                                                                <p className="font-mono py-2 text-black">{user.displayName == null ? 'MR XYZ' : user.displayName}</p>
+                                                                <Link onClick={handelLogout} className=" text-white px-4 rounded-full font-medium bg-red-400 border-2  ">
+                                                                    Logout
+                                                                </Link>
+                                                            </div>
+
+                                                        </> :
+                                                            <>
+                                                            </>
+                                                    }
+                                                </div>
+                                            </ul>
+                                        </div>
+
+
                                     </> :
                                         <>
 
-                                            <Link to='/login' className=" py-2 px-4 rounded-full font-medium border-2 border-green-400 text-black md:ml-4 lg:ml-6">
+                                            <Link to='/login' className=" py-2 px-4 rounded-full font-medium border-2 bg-green-400 text-white md:ml-4 lg:ml-6">
                                                 Login
                                             </Link>
                                         </>
