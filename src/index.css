@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.bg{
+    background-image: url('./assets/blog5-q8o1osg0asw8rtd2tujbhqcqujlkcw4nkr390k4bjk.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+}
