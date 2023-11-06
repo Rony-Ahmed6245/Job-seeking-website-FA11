@@ -5,7 +5,7 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Providers/AuthProvider';
 import img3 from "../../../assets/banner-detail.jpg"
-import img1 from "../../../assets/3054596.jpg"
+import img1 from "../../../assets/undraw_access_account_re_8spm.svg"
 
 
 

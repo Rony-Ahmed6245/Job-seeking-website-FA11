@@ -3,10 +3,10 @@ import phone from "../../assets/phone.svg"
 const Footer = () => {
 
     return (
-        <div className=" bg-[#F9F9F9] mt-12">
+        <div className=" bg-black mt-12 text-white">
             <footer className="footer px-2 py-4 max-w-7xl m-auto  text-base-content">
                 <nav className="font-medium text-gray-600 space-y-4">
-                    <div className="flex gap-2">
+                    <div className="flex gap-2 text-white">
                         <img src={phone} alt="" />
                         <div>
                             <h1>
@@ -16,7 +16,7 @@ const Footer = () => {
                             
                         </div>
                     </div>
-                    <p>
+                    <p className="text-white">
                                 Job Searching Just Got Easy. <br /> Use Jobtex to run a hiring site and <br /> earn money in the process!
                                 118 E 128th St, <br /> East Chicago, IN 46312, US</p>
 
@@ -27,32 +27,32 @@ const Footer = () => {
                 </nav>
                 <nav className="">
                     <header className="text-2xl underline text-green-500">Quick Links</header>
-                    <a className="link link-hover">Job Packages</a>
-                    <a className="link link-hover">Post New Job</a>
-                    <a className="link link-hover">Jobs Listing</a>
-                    <a className="link link-hover">Candidates</a>
-                    <a className="link link-hover">Employers</a>
-                    <a className="link link-hover" >Terms of Use</a>
+                    <a className="link link-hover text-white">Job Packages</a>
+                    <a className="link link-hover text-white">Post New Job</a>
+                    <a className="link link-hover text-white">Jobs Listing</a>
+                    <a className="link link-hover text-white">Candidates</a>
+                    <a className="link link-hover text-white">Employers</a>
+                    <a className="link link-hover text-white" >Terms of Use</a>
 
                 </nav>
                 <nav className="">
                     <header className="underline text-2xl text-green-500">For Candidates</header>
-                    <a className="link link-hover">User Dashboard</a>
-                    <a className="link link-hover">CV Packages</a>
-                    <a className="link link-hover">Candidate Grid</a>
-                    <a className="link link-hover">Candidate Lists</a>
-                    <a className="link link-hover">Messages</a>
-                    <a className="link link-hover" >Jobs Featured</a>
+                    <a className="link link-hover text-white">User Dashboard</a>
+                    <a className="link link-hover text-white">CV Packages</a>
+                    <a className="link link-hover text-white">Candidate Grid</a>
+                    <a className="link link-hover text-white">Candidate Lists</a>
+                    <a className="link link-hover text-white">Messages</a>
+                    <a className="link link-hover text-white" >Jobs Featured</a>
 
                 </nav>
                 <nav className="">
                     <header className=" underline text-2xl text-green-500">For Employers</header>
-                    <a className="link link-hover">Post New Job</a>
-                    <a className="link link-hover">Jobs Listing</a>
-                    <a className="link link-hover">Employers List</a>
-                    <a className="link link-hover">Job Packages</a>
-                    <a className="link link-hover">About Us</a>
-                    <a className="link link-hover" >Terms of use</a>
+                    <a className="link link-hover text-white">Post New Job</a>
+                    <a className="link link-hover text-white">Jobs Listing</a>
+                    <a className="link link-hover text-white">Employers List</a>
+                    <a className="link link-hover text-white">Job Packages</a>
+                    <a className="link link-hover text-white">About Us</a>
+                    <a className="link link-hover text-white" >Terms of use</a>
 
                 </nav>
 

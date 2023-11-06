@@ -35,7 +35,7 @@ const Navbar = () => {
     const alljobs = <NavLink
         to="/allJobs"
         className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "  underline text-green-500" : "text-black"
+            isPending ? "pending" : isActive ? "  underline text-green-500 " : "text-black"
         }
     >
         All Jobs
@@ -67,7 +67,7 @@ const Navbar = () => {
     const blog = <NavLink
         to="/blog"
         className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-green-500 underline" : "text-black"
+            isPending ? "pending" : isActive ? "text-green-500 underline " : "text-black"
         }
     >
         Blog
@@ -77,7 +77,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="border-b-2 border-emerald-400 shadow-sm py-4">
+        <div className=" shadow-sm py-4">
             <div className="max-w-screen-xl	 mx-auto md:px-2">
                 <div className="px-4 md:px-4 lg:px-4   bg-none z-30 relative ">
                     <div className="navbar flex justify-between items-center ">

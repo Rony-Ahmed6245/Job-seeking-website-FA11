@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { useState } from "react";
 import swal from 'sweetalert';
-import img1 from "../../assets/3054596.jpg"
+import img1 from "../../assets/undraw_access_account_re_8spm.svg"
 import img2 from "../../assets/banner-detail.jpg"
 
 
