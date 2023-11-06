@@ -22,7 +22,7 @@ const Hiring = () => {
                         </div>
                     </div>
                 </div>
-                <img src={hiring} alt="" />
+                <img  src={hiring} alt="" />
             </div>
         </div>
     );

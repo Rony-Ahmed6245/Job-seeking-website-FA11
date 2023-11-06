@@ -9,9 +9,9 @@ const Banner = () => {
                         <h1 className='lg:text-7xl md:text-4xl text-3xl font-bold text-center md:text-left text-white'>Find The Job That
                             Fits Your Life</h1>
                         <p className='text-white text-center md:text-left'>Resume-Library is a true performance-based job board. Enjoy custom  hiring products and access to up to 10,000 new resume registrations daily, with no subscriptions or user licences.</p>
-                        <div className='flex rounded-full'>
+                        <div className='flex rounded-full '>
                             <input className='md:py-4 py-2 px-4 md:pr-36 lg:pr-60 pr-12 rounded-l-md outline-none' placeholder='Job Title' type="text" />
-                            <input className=' bg-green-500  text-white md:py-4 py-2 outline-none px-2 rounded-r-md' type="button" value="Find Jobs" />
+                            <input className=' bg-green-500  hover:drop-shadow-2xl  shadow-white text-white md:py-4 py-2 outline-none px-2 rounded-r-md' type="button" value="Find Jobs" />
                         </div>
                         <div className='md:flex'>
                             <div className='flex gap-3 '>
