@@ -77,7 +77,7 @@ const Navbar = () => {
 
 
     return (
-        <div className=" shadow-sm py-8">
+        <div className=" shadow-sm py-4">
             <div className="max-w-screen-xl	 mx-auto md:px-2">
                 <div className="px-4 md:px-4 lg:px-4   bg-none z-30 relative ">
                     <div className="navbar flex justify-between items-center ">
@@ -149,7 +149,7 @@ const Navbar = () => {
                         </div>
                         <div className="navbar-center hidden lg:flex">
                             <ul className=" menu-horizontal flex items-center px-4 gap-2 lg:gap-5  text-white font-medium md:font-bold">
-                                <div className="ml-auto gap-5 flex md:mx-[100px] lg:mx-[150px] font-medium">
+                                <div className="ml-auto gap-5 flex md:mx-[100px] lg:mx-[250px] font-medium">
                                     <li className="">{home}</li>
                                     <li className="">{alljobs}</li>
                                     <li className="">{blog}</li>
