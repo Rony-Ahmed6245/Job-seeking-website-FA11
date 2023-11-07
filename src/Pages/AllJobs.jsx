@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import JobTable from "../components/JobTable";
 import { BsSearch } from "react-icons/bs";
+import { Helmet } from "react-helmet";
 
 
 const AllJobs = () => {
@@ -9,10 +10,14 @@ const AllJobs = () => {
     console.log(search);
     const data = useLoaderData();
     // console.log(data);
-
+    const dynamicTitle = 'All Jobs';
 
     return (
         <div className="max-w-screen-6xl mx-auto md:px-2 ">
+            {/* dynamic title  */}
+            <Helmet>
+                <title>{dynamicTitle}</title>
+            </Helmet>
             <div className="md:flex md:justify-between md:items-center justify-center items-center mt-10 mb-2">
                 <h1 className="text-2xl  font-bold ">All Posted jobs: {data.length}</h1>
                 <div className="flex items-center justify-center py-2" >

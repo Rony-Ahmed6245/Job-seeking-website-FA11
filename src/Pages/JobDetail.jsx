@@ -1,8 +1,10 @@
+import { Helmet } from "react-helmet";
 import { useLoaderData, useParams } from "react-router-dom";
 // import banne from "../assets/banner-detail.jpg"
 // import logo from "../assets/e3.png"
 
 const JobDetail = () => {
+    const dynamicTitle = 'Job Details';
     const data = useLoaderData();
     console.log(data);
 
@@ -18,6 +20,10 @@ const JobDetail = () => {
 
     return (
         <div className="max-w-7xl mx-auto px-3">
+            {/* dynamic title  */}
+            <Helmet>
+                <title>{dynamicTitle}</title>
+            </Helmet>
             <div>
                 <img className="w-full " src={banner} alt="" />
             </div>

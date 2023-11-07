@@ -4,10 +4,17 @@ import blog3 from "../assets/Access-Token.webp"
 import blog4 from "../assets/Screenshot 2023-11-06 130424.png"
 import { BsFacebook, BsPinterest, BsTwitter } from "react-icons/bs";
 import { FaUserLarge } from "react-icons/fa6";
+import { Helmet } from "react-helmet";
+
 
 const Blog = () => {
+    const dynamicTitle = 'Blog';
     return (
         <div className="max-w-screen-2xl mx-auto md:px-2">
+             {/* Use Helmet to set the title */}
+      <Helmet>
+        <title>{dynamicTitle}</title>
+      </Helmet>
             <div className="bg h-[300px]"></div>
             <div>
 

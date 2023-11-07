@@ -1,4 +1,5 @@
 
+import { Helmet } from "react-helmet";
 import Swal from "sweetalert2";
 import job from "../assets/sss.svg"
 
@@ -21,7 +22,7 @@ const handleJobsData = async (e) => {
     const deadline = form.deadline.value;
     const currentDate = new Date().toDateString();
 
-    const formData = { name, salary, category, date: currentDate, deadline, applicantNo, jobTitle, dsc, photo , banner};
+    const formData = { name, salary, category, date: currentDate, deadline, applicantNo, jobTitle, dsc, photo, banner };
     console.log(formData);
     fetch("http://localhost:5001/v1/job", {
         method: "POST",
@@ -60,7 +61,7 @@ const handleJobsData = async (e) => {
 
 
 const AddaJobs = () => {
-
+    const dynamicTitle = 'Add A Job';
 
 
 
@@ -70,6 +71,10 @@ const AddaJobs = () => {
 
     return (
         <div className="max-w-7xl mx-auto px-3">
+            {/* dynamic title  */}
+            <Helmet>
+                <title>{dynamicTitle}</title>
+            </Helmet>
             {/* <div className="bg h-[300px]"></div> */}
             <h1 className="text-4xl text-center text-[#0DBC95] mb-10 font-bold mt-4">Add A New Job</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center items-center">
@@ -110,10 +115,10 @@ const AddaJobs = () => {
                                 <label className="label">
                                     <span className="label-text">Salary Range</span>
                                 </label>
-            
-                                <input type="number" name="salary" min="2000" max="100000" step="1000" placeholder="salary" className="py-2 p-2 rounded design outline-none" required/>
 
-                                    {/* <input type="number" name="salary" placeholder="salary" className="py-2 p-2 rounded design outline-none" required /> */}
+                                <input type="number" name="salary" min="2000" max="100000" step="1000" placeholder="salary" className="py-2 p-2 rounded design outline-none" required />
+
+                                {/* <input type="number" name="salary" placeholder="salary" className="py-2 p-2 rounded design outline-none" required /> */}
                             </div>
                         </div>
 

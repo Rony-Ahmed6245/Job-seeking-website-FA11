@@ -6,11 +6,12 @@ import { useState } from "react";
 import swal from 'sweetalert';
 import img1 from "../../assets/login.svg"
 import img2 from "../../assets/banner-detail.jpg"
+import { Helmet } from "react-helmet";
 
 
 
 const Login = () => {
-  
+    const dynamicTitle = 'Login';
     const { logIn, googleSignIn } = useContext(AuthContext);
     const location = useLocation();
     console.log(location);
@@ -63,11 +64,15 @@ const Login = () => {
     return (
         <div>
             <div className=" max-w-7xl mx-auto">
+                {/* dynamic title */}
+                <Helmet>
+                    <title>{dynamicTitle}</title>
+                </Helmet>
                 <img src={img2} alt="" />
-                <h1  className="text-4xl font-extrabold text-center my-8 text-[#0DBC95]">LOGIN</h1>
+                <h1 className="text-4xl font-extrabold text-center my-8 text-[#0DBC95]">LOGIN</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-5 p-4 justify-center items-center">
 
-                    <div  className=" rounded-lg py-5">
+                    <div className=" rounded-lg py-5">
                         <h1 className="text-2xl font-bold text-[#0DBC95] mt-4 text-center">Please Login & Access Find Jobs </h1>
                         <form onSubmit={handelSignIn} className="card-body px-4 ">
                             <div className="form-control">
@@ -112,7 +117,7 @@ const Login = () => {
                             </div>
                         </div>
                     </div>
-                    <div  className="flex justify-center">
+                    <div className="flex justify-center">
                         <img src={img1} className=" " />
                     </div>
                 </div>

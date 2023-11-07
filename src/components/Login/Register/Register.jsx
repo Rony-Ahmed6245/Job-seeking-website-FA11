@@ -6,18 +6,17 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Providers/AuthProvider';
 import img3 from "../../../assets/banner-detail.jpg"
 import img1 from "../../../assets/login.svg"
+import { Helmet } from 'react-helmet';
 
 
 
 
 const Register = () => {
-
-
+    const dynamicTitle = 'Register';
     const { createUser } = useContext(AuthContext);
-    
     const [registerError, setRegisterError] = useState()
     const [passwordError, setSetPasswordError] = useState()
-    const [upperCaseErr, setUpperCaseErr ] = useState()
+    const [upperCaseErr, setUpperCaseErr] = useState()
     const [success, setSuccess] = useState('')
 
 
@@ -25,12 +24,11 @@ const Register = () => {
     const handelRegister = (e) => {
         e.preventDefault()
         // reset error 
-        
         setRegisterError('');
         setSuccess('');
         setSetPasswordError('')
         setUpperCaseErr('')
-        
+
         const displayName = e.target.name.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
@@ -39,14 +37,12 @@ const Register = () => {
             // Password is too short
             console.log('Password at least 6 characters');
             setSetPasswordError('Password at least 6 characters');
-            return; 
+            return;
         } else if ((/^(?![A-Z])[^!@#$%^&*()_+{}\[\]:;<>,.?~\\\/]*$/.test(password))) {
             setUpperCaseErr(' At least one uppercase(A-Z) and Special Character');
-            return; 
+            return;
         }
-        
-        
-       
+
 
         createUser(email, password, displayName)
             .then(result => {
@@ -57,7 +53,7 @@ const Register = () => {
             .catch(error => {
                 // setRegisterError(error.message);
                 // setRegisterError(error.message)
-                if(error.message){
+                if (error.message) {
                     setRegisterError('Already Register')
                     return
                 }
@@ -70,12 +66,16 @@ const Register = () => {
     return (
         <div>
             <div>
+                {/* dynamic title  */}
+                <Helmet>
+                    <title>{dynamicTitle}</title>
+                </Helmet>
                 <div className=" max-w-7xl mx-auto">
-                <img src={img3} alt="" />
+                    <img src={img3} alt="" />
                     <h1 className="text-4xl font-extrabold text-center my-8 text-[#0DBC95]">REGISTER</h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 p-4 justify-center items-center">
 
-                        <div  className=" rounded-lg">
+                        <div className=" rounded-lg">
                             <h1 className="text-4xl font-extrabold text-center my-8 text-[#0DBC95]">Please Register & Find jobs</h1>
                             <form onSubmit={handelRegister} className="card-body px-4 ">
                                 <div className="form-control">
@@ -85,7 +85,7 @@ const Register = () => {
                                     <input type="email" placeholder="Email" name='email' className="w-full py-2 px-4  border-b-2 border-[#0DBC95] rounded outline-none my-4" required />
                                 </div>
                                 <div className="form-control">
-                                    <input type="text" placeholder="Photo URL" name='Photo' className="w-full py-2 px-4  border-b-2 border-[#0DBC95] rounded outline-none my-4"/>
+                                    <input type="text" placeholder="Photo URL" name='Photo' className="w-full py-2 px-4  border-b-2 border-[#0DBC95] rounded outline-none my-4" />
                                 </div>
                                 <div className="form-control">
                                     <input type="password" name='password' placeholder="Password" className="w-full py-2 px-4  border-b-2 border-[#0DBC95] rounded outline-none" required />
@@ -93,23 +93,23 @@ const Register = () => {
                                 <h1 className="text-sm p-2">Forget Password</h1>
                                 {/* Display the error message */}
                                 {registerError && (
-                                    <div className="text-red-500 font-bold text-center my-2">      
-                                          {registerError}
+                                    <div className="text-red-500 font-bold text-center my-2">
+                                        {registerError}
                                     </div>
                                 )}
                                 {upperCaseErr && (
-                                    <div className="text-red-500 font-bold text-center my-2">      
-                                          {upperCaseErr}
+                                    <div className="text-red-500 font-bold text-center my-2">
+                                        {upperCaseErr}
                                     </div>
                                 )}
                                 {passwordError && (
-                                    <div className="text-red-500 font-bold text-center my-2">      
-                                          {passwordError}
+                                    <div className="text-red-500 font-bold text-center my-2">
+                                        {passwordError}
                                     </div>
                                 )}
                                 {success && (
-                                    <div className="text-green-500 font-bold text-center my-2">      
-                                         {success}  
+                                    <div className="text-green-500 font-bold text-center my-2">
+                                        {success}
                                     </div>
                                 )}
                                 <div className="flex justify-center">
@@ -122,7 +122,7 @@ const Register = () => {
 
                         </div>
                         <div className="flex justify-center">
-                        <img src={img1} className=" " />
+                            <img src={img1} className=" " />
                         </div>
                     </div>
                 </div>
