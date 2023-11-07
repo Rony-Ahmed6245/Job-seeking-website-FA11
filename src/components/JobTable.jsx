@@ -21,7 +21,7 @@ const JobTable = ({ job }) => {
                 <td>{deadline}</td>
                 <td>$1000-{salary}</td>
                 <th className="text-center">
-                    <Link to={`/v1/details/${_id}`} className="btn btn-ghost btn-xs">Details</Link>
+                    <Link to={`/v1/details/${_id}`} className="btn border btn-ghost btn-xs">Details</Link>
                 </th>
             </tr>
         </tbody>

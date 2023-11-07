@@ -31,18 +31,19 @@ const AllJobs = () => {
                             <th className="font-bold text-md"></th>
                         </tr>
                     </thead>
-                    {
+                    {data.length === 0 ? (
+                        <div>
+                            <h1 className="text-center text-2xl">No job found </h1>
+                        </div>
+                    ) : (
                         data.map(job => (
                             <JobTable key={job._id} job={job}></JobTable>
                         ))
-                    }
+                    )}
+
+
                 </table>
             </div>
-
-
-
-
-
         </div>
     );
 };
