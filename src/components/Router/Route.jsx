@@ -6,6 +6,7 @@ import AppliedJobs from "../../Pages/AppliedJobs";
 import Blog from "../../Pages/Blog";
 import ErrorPage from "../../Pages/ErrorPage";
 import Home from "../../Pages/Home";
+import JobDetail from "../../Pages/JobDetail";
 import MyJobs from "../../Pages/MyJobs";
 
 import Login from "../Login/Login";
@@ -53,6 +54,11 @@ const myCreateRoute = createBrowserRouter([
             {
                 path:'/blog',
                 element:<Blog></Blog>
+            },
+            {
+                path:'/v1/details/:id',
+                element:<JobDetail></JobDetail>,
+                loader: () => fetch("http://localhost:5001/v1/jobs"),
             }
            
         ]
