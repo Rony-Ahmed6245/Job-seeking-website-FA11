@@ -15,7 +15,7 @@ const Blog = () => {
 
                 <div className="max-w-3xl  mx-auto -mt-[50px]">
                     <div className="shadow rounded bg-white p-10 text-center space-y-5">
-                        <h1 className="text-md bg-green-300 text-center ">Interview</h1>
+                        <h1 className="text-md bg-[#0DBC95] text-white text-center ">Interview</h1>
                         <h1 className="font-bold text-3xl">Find The Job That Fits Your Life</h1>
                         <div className="flex justify-center gap-5">
                             <h1>by admin</h1>
@@ -60,7 +60,7 @@ const Blog = () => {
                         
                         <hr />
                         {/*blog ans no 1 */}
-                        <h1 className="text-left text-2xl"> <span className="text-xl text-green-600  font-bold">Qustion no-1:</span> What is an access token and refresh token?</h1>
+                        <h1 className="text-left text-2xl"> <span className="text-xl text-[#0DBC95] font-bold">Qustion no-1:</span> What is an access token and refresh token?</h1>
                         <p className="text-justify">Refresh token rotation provides applications and platforms with better security measures by decreasing their lifetime. This lowers the chance that a hacker can access a valid token, particularly for single-page applications (SPAs) and browser-based applications</p>
                         <img src={blog3} alt="" />
                         <p className="text-justify">We use tokens to authenticate users and authorize requests without keeping session data on the server. Tokens are data confirming a user’s identity and are analogous to digital signatures.In this tutorial, we’ll clarify the distinction between access and refresh tokens and show how to implement them.An access token (from an authorization server) allows temporary access to restricted resources such as APIs or websites.
@@ -70,13 +70,13 @@ const Blog = () => {
                         <hr />
 
                         {/* blog ans no 2 */}
-                        <h1 className="text-left text-2xl"> <span className="text-xl text-green-600  font-bold">Qustion no-2:</span> How do they work and where should we
+                        <h1 className="text-left text-2xl"> <span className="text-xl text-[#0DBC95]  font-bold">Qustion no-2:</span> How do they work and where should we
                             store them on the client-side?</h1>
                         <p className="text-justify">Modern web browsers support a number of ways for websites to store data on the user's computer — with the user's permission — then retrieve it when necessary. This lets you persist data for long-term storage, save sites or documents for offline use, retain user-specific settings for your site, and more. This article explains the very basics of how these work.</p>
                         <p className="text-justify">Let's apply this new-found knowledge by writing a working example to give you an idea of how web storage can be used. Our example will allow you to enter a name, after which the page will update to give you a personalized greeting. This state will also persist across page/browser reloads, because the name is stored in web storage.</p>
                         <hr />
                         {/* blog ans no 3 */}
-                        <h1 className="text-left text-2xl"> <span className="text-xl text-green-600  font-bold">Qustion no-3:</span> What is express js?</h1>
+                        <h1 className="text-left text-2xl"> <span className="text-xl text-[#0DBC95]  font-bold">Qustion no-3:</span> What is express js?</h1>
                         <p className="text-justify">Express.js, often referred to as simply Express, is a popular and minimalist web application framework for Node.js, a runtime environment for executing JavaScript code on the server-side. Express.js provides a set of features and tools for building web and mobile applications, as well as APIs.
 
                             Key features and characteristics of Express.js include:
@@ -99,7 +99,7 @@ const Blog = () => {
 
                         <hr />
                         {/* blog ans no 4 */}
-                        <h1 className="text-left text-2xl"> <span className="text-xl text-green-600  font-bold">Qustion no-4:</span>  What is Nest JS ?</h1>
+                        <h1 className="text-left text-2xl"> <span className="text-xl text-[#0DBC95] font-bold">Qustion no-4:</span>  What is Nest JS ?</h1>
                         <p className="text-justify">
                             NestJS is a popular and powerful open-source framework for building server-side applications using TypeScript or JavaScript. It is built on top of Node.js and leverages the capabilities of modern JavaScript, making it an excellent choice for building scalable and maintainable server-side applications, including web applications, APIs, and microservices. NestJS is often used in combination with other technologies like Express.js and is designed to provide a robust and extensible foundation for building enterprise-grade applications.
                         </p>
@@ -137,7 +137,7 @@ const Blog = () => {
                                 <h1 className="font-bold">Admin</h1>
                                 <h1 className="text-sm">Date : jun 30, 2023</h1>
                                 <p>Donec eu dui condimentum, laoreet nulla vitae, venenatis ipsum. Donec luctus sem sit amet varius laoreet. Aliquam fermentum sit amet urna fringilla tincidunt.</p>
-                                <h2 className="text-green-600">Reply</h2>
+                                <h2 className="text-[#0DBC95]">Reply</h2>
                             </div>
                         </div>
                         <hr />
@@ -147,7 +147,7 @@ const Blog = () => {
                                 <h1 className="font-bold">Admin</h1>
                                 <h1 className="text-sm">Date : jun 30, 2023</h1>
                                 <p>Donec eu dui condimentum, laoreet nulla vitae, venenatis ipsum. Donec luctus sem sit amet varius laoreet. Aliquam fermentum sit amet urna fringilla tincidunt.</p>
-                                <h2 className="text-green-600">Reply</h2>
+                                <h2 className="text-[#0DBC95]">Reply</h2>
                             </div>
                         </div>
                     </div>

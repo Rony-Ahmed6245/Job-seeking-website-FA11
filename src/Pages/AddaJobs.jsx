@@ -1,6 +1,6 @@
 
 import Swal from "sweetalert2";
-import job from "../assets/jobaa.svg"
+import job from "../assets/sss.svg"
 
 
 
@@ -71,7 +71,7 @@ const AddaJobs = () => {
     return (
         <div className="max-w-7xl mx-auto px-3">
             {/* <div className="bg h-[300px]"></div> */}
-            <h1 className="text-4xl text-center text-green-500 mb-10 font-bold mt-4">Add A New Job</h1>
+            <h1 className="text-4xl text-center text-[#0DBC95] mb-10 font-bold mt-4">Add A New Job</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center items-center">
                 <img src={job} alt="" />
                 <div className="max-w-3xl  p-6 ">
@@ -169,7 +169,7 @@ const AddaJobs = () => {
                         </div>
                         {/* submitt  */}
                         <div className="form-control mt-6">
-                            <button className="bg-green-500 py-2 outline-none rounded text-white">Add Job</button>
+                            <button className="bg-[#0DBC95] py-2 outline-none rounded text-white">Add Job</button>
                         </div>
                     </form>
                 </div>

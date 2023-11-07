@@ -1,4 +1,5 @@
 import phone from "../../assets/phone.svg"
+import { BsFacebook, BsPinterest, BsTwitter } from "react-icons/bs";
 
 const Footer = () => {
 
@@ -19,14 +20,20 @@ const Footer = () => {
                     <p className="text-white">
                                 Job Searching Just Got Easy. <br /> Use Jobtex to run a hiring site and <br /> earn money in the process!
                                 118 E 128th St, <br /> East Chicago, IN 46312, US</p>
+                                <div className="md:flex gap-4 justify-center items-center ">
+                              
+                              <BsFacebook className="text-2xl"></BsFacebook>
+                              <BsPinterest className="text-2xl"></BsPinterest>
+                              <BsTwitter className="text-2xl"></BsTwitter>
+                </div>
 
                     <div>
-                        <input className="border-green-500 border-2 px-4 py-1 outline-none" placeholder="Enter your Email" type="text" />
-                        <button className="border-green-500 border-2 px-4 py-1 outline-none hover:bg-green-600 transition-all delay-75 bg-green-500 text-white">Send</button>
+                        <input className="border-[#0DBC95] border-2 px-4 py-1 outline-none" placeholder="Enter your Email" type="text" />
+                        <button className="border-[#0DBC95] border-2 px-4 py-1 outline-none hover:bg-[#0DBC95] transition-all delay-75 bg-[#0DBC95] text-white">Send</button>
                     </div>
                 </nav>
                 <nav className="">
-                    <header className="text-2xl underline text-green-500">Quick Links</header>
+                    <header className="text-2xl underline text-[#0DBC95]">Quick Links</header>
                     <a className="link link-hover text-white">Job Packages</a>
                     <a className="link link-hover text-white">Post New Job</a>
                     <a className="link link-hover text-white">Jobs Listing</a>
@@ -36,7 +43,7 @@ const Footer = () => {
 
                 </nav>
                 <nav className="">
-                    <header className="underline text-2xl text-green-500">For Candidates</header>
+                    <header className="underline text-2xl text-[#0DBC95]">For Candidates</header>
                     <a className="link link-hover text-white">User Dashboard</a>
                     <a className="link link-hover text-white">CV Packages</a>
                     <a className="link link-hover text-white">Candidate Grid</a>
@@ -46,7 +53,7 @@ const Footer = () => {
 
                 </nav>
                 <nav className="">
-                    <header className=" underline text-2xl text-green-500">For Employers</header>
+                    <header className=" underline text-2xl text-[#0DBC95]">For Employers</header>
                     <a className="link link-hover text-white">Post New Job</a>
                     <a className="link link-hover text-white">Jobs Listing</a>
                     <a className="link link-hover text-white">Employers List</a>
@@ -62,6 +69,7 @@ const Footer = () => {
 
                     <p>@2023 Jobtex. All Rights Reserved.</p>
                 </aside>
+               
                 <nav className="md:place-self-center md:justify-self-end">
                     <div className="grid grid-flow-col gap-4">
                         <a href="">Terms Of Services </a>|

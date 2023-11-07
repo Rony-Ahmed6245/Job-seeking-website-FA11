@@ -27,7 +27,7 @@ const Navbar = () => {
     const home = <NavLink
         to="/"
         className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-green-500 underline" : "text-black"
+            isPending ? "pending" : isActive ? "text-[#0DBC95] underline" : "text-black"
         }
     >
         Home
@@ -35,7 +35,7 @@ const Navbar = () => {
     const alljobs = <NavLink
         to="/allJobs"
         className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "  underline text-green-500 " : "text-black"
+            isPending ? "pending" : isActive ? "  underline text-[#0DBC95] " : "text-black"
         }
     >
         All Jobs
@@ -43,7 +43,7 @@ const Navbar = () => {
     const appliedJobs = <NavLink
         to="/appliedJobs"
         className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "  underline text-green-500" : "text-black"
+            isPending ? "pending" : isActive ? "  underline text-[#0DBC95]" : "text-black"
         }
     >
         Applied Jobs
@@ -51,7 +51,7 @@ const Navbar = () => {
     const addAjobs = <NavLink
         to="/addAjobs"
         className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-green-500 underline " : "text-black"
+            isPending ? "pending" : isActive ? "text-[#0DBC95] underline " : "text-black"
         }
     >
         Add a jobs
@@ -59,7 +59,7 @@ const Navbar = () => {
     const myJobs = <NavLink
         to="/myJobs"
         className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-green-500 underline" : "text-black"
+            isPending ? "pending" : isActive ? "text-[#0DBC95] underline" : "text-black"
         }
     >
         My Jobs
@@ -67,7 +67,7 @@ const Navbar = () => {
     const blog = <NavLink
         to="/blog"
         className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-green-500 underline " : "text-black"
+            isPending ? "pending" : isActive ? "text-[#0DBC95] underline " : "text-black"
         }
     >
         Blog
@@ -137,7 +137,7 @@ const Navbar = () => {
                                             </> :
                                                 <>
 
-                                                    <Link to='/login' className="  px-4 font-medium bg-green-400 border-2 rounded-full text-white ">
+                                                    <Link to='/login' className="  px-4 font-medium bg-[#0DBC95] border-2 rounded-full text-white ">
                                                         Login
                                                     </Link>
                                                 </>
@@ -205,7 +205,7 @@ const Navbar = () => {
                                     </> :
                                         <>
 
-                                            <Link to='/login' className=" py-2 px-4 rounded-full font-medium border-2 bg-green-400 text-white md:ml-4 lg:ml-6">
+                                            <Link to='/login' className=" py-2 px-4 rounded-full font-medium border-2 bg-[#0DBC95] text-white md:ml-4 lg:ml-6">
                                                 Login
                                             </Link>
                                         </>
