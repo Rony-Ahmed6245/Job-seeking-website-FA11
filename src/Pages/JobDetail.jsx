@@ -49,6 +49,8 @@ const JobDetail = () => {
                 <div className="md:col-span-2 mt-8 rounded border bg-[#F5F5F5] p-10 space-y-2">
                     <h1 className="text-2xl font-semibold mt-5">Job Information</h1>
                     <hr />
+                    <h1 className="text-md font-medium text-gray-500">Applicant No: 0000{applicantNo} </h1>
+                    <hr />
                     <h1 className="text-md font-medium text-gray-500">Date Posted: {currentDate} </h1>
                     <hr />
                     <h1 className="text-md font-medium text-gray-500">Category: {category} </h1>

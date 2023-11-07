@@ -20,9 +20,9 @@ const JobTable = ({ job }) => {
                 <td>{currentDate}</td>
                 <td>{deadline}</td>
                 <td>$1000-{salary}</td>
-                <th className="text-center">
-                    <Link to={`/v1/details/${_id}`} className="btn border btn-ghost btn-xs">Details</Link>
-                </th>
+                <td className="text-center">
+                    <Link to={`/v1/details/${_id}`} className="py-1 px-4 rounded-full  bg-[#0DBE96] text-white">Details</Link>
+                </td>
             </tr>
         </tbody>
     );
