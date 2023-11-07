@@ -1,9 +1,19 @@
+
 import { Link } from "react-router-dom";
 
 
+
 const JobTable = ({ job }) => {
+
     const {_id, name, salary, category, date:currentDate, deadline, applicantNo, jobTitle, dsc, photo } = job || {}
     // console.log(job);
+
+
+
+
+
+
+
     return (
         <tbody>
             {/* row 1 */}
@@ -21,7 +31,8 @@ const JobTable = ({ job }) => {
                 <td>{deadline}</td>
                 <td>$1000-{salary}</td>
                 <td className="text-center">
-                    <Link to={`/v1/details/${_id}`} className="py-1 px-4 rounded-full  bg-[#0DBE96] text-white">Details</Link>
+                    <Link to={`/v1/details/${_id}`}
+                     className="py-1 px-4 rounded-full transition-all hover:bg-white hover:text-black bg-[#0DBE96] text-white">Details</Link>
                 </td>
             </tr>
         </tbody>

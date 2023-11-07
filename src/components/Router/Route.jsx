@@ -12,6 +12,7 @@ import MyJobs from "../../Pages/MyJobs";
 import Login from "../Login/Login";
 import Register from "../Login/Register/Register";
 import Root from "../Root/Root";
+import PrivateRoute from "./PrivateRoute";
 
 
 //     console.log(user);
@@ -57,7 +58,7 @@ const myCreateRoute = createBrowserRouter([
             },
             {
                 path:'/v1/details/:id',
-                element:<JobDetail></JobDetail>,
+                element:<PrivateRoute><JobDetail></JobDetail></PrivateRoute>,
                 loader: () => fetch("http://localhost:5001/v1/jobs"),
             }
            
