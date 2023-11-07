@@ -14,13 +14,14 @@ const handleJobsData = async (e) => {
     const jobTitle = form.title.value;
     const dsc = form.dsc.value;
     const photo = form.photo.value;
+    const banner = form.banner.value;
     const name = form.name.value;
     const salary = form.salary.value;
     const category = form.category.value;
     const deadline = form.deadline.value;
     const currentDate = new Date().toDateString();
 
-    const formData = { name, salary, category, date: currentDate, deadline, applicantNo, jobTitle, dsc, photo };
+    const formData = { name, salary, category, date: currentDate, deadline, applicantNo, jobTitle, dsc, photo , banner};
     console.log(formData);
     fetch("http://localhost:5001/v1/job", {
         method: "POST",
@@ -120,13 +121,19 @@ const AddaJobs = () => {
 
 
                         {/* part3 */}
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center items-center">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 justify-center items-center">
                             {/* photo */}
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">PhotoURL Banner</span>
+                                    <span className="label-text">Copmany logo</span>
                                 </label>
                                 <input type="text" name="photo" placeholder="PhotoURL" className="py-2 p-2 rounded design outline-none" required />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Job Banner</span>
+                                </label>
+                                <input type="text" name="banner" placeholder="PhotoURL" className="py-2 p-2 rounded design outline-none" required />
                             </div>
 
                             {/* application date  */}
