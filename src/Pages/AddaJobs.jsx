@@ -22,7 +22,7 @@ const handleJobsData = async (e) => {
 
     const formData = { name, salary, category, date: currentDate, deadline, applicantNo, jobTitle, dsc, photo };
     console.log(formData);
-    fetch("http://localhost:5001/jobs", {
+    fetch("http://localhost:5001/v1/job", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -54,7 +54,7 @@ const handleJobsData = async (e) => {
                 text: 'An error occurred while adding the product.',
             });
         });
-        form.reset();   
+    form.reset();
 };
 
 
@@ -74,7 +74,7 @@ const AddaJobs = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center items-center">
                 <img src={job} alt="" />
                 <div className="max-w-3xl  p-6 ">
-                  
+
                     <form onSubmit={handleJobsData} className="space-y-2">
 
                         {/* part1 */}
@@ -107,9 +107,12 @@ const AddaJobs = () => {
                             {/* salary rangy */}
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">salary</span>
+                                    <span className="label-text">Salary Range</span>
                                 </label>
-                                <input type="number" name="salary" placeholder="salary" className="py-2 p-2 rounded design outline-none" required />
+            
+                                <input type="number" name="salary" min="2000" max="100000" step="1000" placeholder="salary" className="py-2 p-2 rounded design outline-none" required/>
+
+                                    {/* <input type="number" name="salary" placeholder="salary" className="py-2 p-2 rounded design outline-none" required /> */}
                             </div>
                         </div>
 
@@ -121,7 +124,7 @@ const AddaJobs = () => {
                             {/* photo */}
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">PhotoURL</span>
+                                    <span className="label-text">PhotoURL Banner</span>
                                 </label>
                                 <input type="text" name="photo" placeholder="PhotoURL" className="py-2 p-2 rounded design outline-none" required />
                             </div>

@@ -8,7 +8,7 @@ import img from "../../assets/logo.svg"
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext)
-    console.log(user);
+    // console.log(user);
 
     const handelLogout = () => {
         logOut()

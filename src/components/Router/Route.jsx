@@ -28,6 +28,7 @@ const myCreateRoute = createBrowserRouter([
             {
                 path:'/allJobs',
                 element:<AllJobs></AllJobs>,
+                loader: () => fetch("http://localhost:5001/v1/jobs"),
             },
             {
                 path:'/appliedJobs',
