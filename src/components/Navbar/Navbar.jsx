@@ -123,26 +123,28 @@ const Navbar = () => {
                                 <label tabIndex={1} className="btn btn-ghost lg:hidden flex-col ">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-[50px] text-black w-[50px]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                                 </label>
-                                <ul tabIndex={0} className=" menus menu-sm dropdown-content space-y-4 py-10 rounded  bg-white design   z-[10]    -left-20 ">
-                                    <p className=" px-3">{home}</p>
-                                    <p className="uppercase  px-3">{alljobs}</p>
-                                    <p className="uppercase  px-3">{blog}</p>
-                                    <li className="space-y-4">
-                                        {
-                                            user ? <>
-                                                <p className="uppercase  px-3">{appliedJobs}</p>
-                                                <p className="uppercase px-3">{addAjobs}</p>
-                                                <p className="uppercase  px-3">{myJobs}</p>
+                                <ul tabIndex={0} className=" menus menu-sm dropdown-content  space-y-4 py-10 rounded  bg-white design   z-[10]    -left-20 ">
+                                    <div className="w-[150px] space-y-4">
+                                        <li className="uppercase  px-3">{home}</li>
+                                        <li className="uppercase  px-3">{alljobs}</li>
+                                        <li className="uppercase  px-3">{blog}</li>
+                                        <li className="space-y-4">
+                                            {
+                                                user ? <>
+                                                    <li className="uppercase  px-3">{appliedJobs}</li>
+                                                    <li className="uppercase px-3">{addAjobs}</li>
+                                                    <li className="uppercase  px-3">{myJobs}</li>
 
-                                            </> :
-                                                <>
+                                                </> :
+                                                    <>
 
-                                                    <Link to='/login' className="  px-4 font-medium bg-[#0DBC95] border-2 rounded-full text-white ">
-                                                        Login
-                                                    </Link>
-                                                </>
-                                        }
-                                    </li>
+                                                        <Link to='/login' className="  px-4 font-medium bg-[#0DBC95] border-2 rounded-full text-white ">
+                                                            Login
+                                                        </Link>
+                                                    </>
+                                            }
+                                        </li>
+                                    </div>
                                 </ul>
 
                             </div>
