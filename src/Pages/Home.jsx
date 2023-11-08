@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import Banner from "../components/Banner";
+import FutureJobs from "../components/FutureJobs";
 import Hiring from "../components/Hiring";
 import OurClient from "../components/OurClient";
 
@@ -19,6 +20,7 @@ const Home = () => {
             </Helmet>
             {/* sublayouts */}
             <Banner></Banner>
+            <FutureJobs></FutureJobs>
             <Hiring></Hiring>
             <OurClient></OurClient>
         </div>

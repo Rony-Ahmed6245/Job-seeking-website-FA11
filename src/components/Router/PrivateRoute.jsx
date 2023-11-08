@@ -21,7 +21,7 @@ const PrivateRoute = ({ children }) => {
     }
 
     // If the user is not authenticated, use Swal to display an error message
-    Swal.fire("Error!", "User not logged in", "error");
+    Swal.fire("Error!", "You have login first to view details", "error");
 
     // Navigate to the login page
     return <Navigate state={location.pathname} to="/login" replace />;
