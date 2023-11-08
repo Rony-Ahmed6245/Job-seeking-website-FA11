@@ -4,7 +4,7 @@ import { BsFillStarFill } from "react-icons/bs";
 const OurClient = () => {
     return (
         <div className="space-y-3 py-5 max-w-screen-xl	 mx-auto md:px-2">
-            <h1 className="text-center md:text-4xl text-3xl font-bold">what our clients are saying</h1>
+            <h1 className="text-center md:text-4xl text-3xl font-bold">What our clients are saying</h1>
             <p  className="text-center ">Showing companies based on reviews and recent job openings</p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 pt-8 gap-4">
