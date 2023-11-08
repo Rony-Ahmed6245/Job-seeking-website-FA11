@@ -1,8 +1,9 @@
 import { BsHeartFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const JobCard = ({ item }) => {
     console.log(item);
-    const { name, salary, category, date: currentDate, deadline, applicantNo, jobTitle, dsc, photo, banner } = item || {}
+    const {_id, name, salary, category, date: currentDate, deadline, applicantNo, jobTitle, dsc, photo, banner } = item || {}
     return (
         <div>
             <div>
@@ -27,8 +28,9 @@ const JobCard = ({ item }) => {
                         <div>
                             <h1 className="text-sm text-gray-500">$1000-${salary}/<span className="text-sm">month</span> </h1>
                             <h1 className="text-sm  text-gray-500">Deadline:{deadline}</h1>
+                            <h1 className="text-sm  text-gray-500">Applicant No: 0000{applicantNo}</h1>
                         </div>
-                        <button className="py-1 px-4 rounded hover:text-white hover:bg-[#0DBC95] border transition-all text-black bg-white">Details</button>
+                        <Link to={`/v1/details/${_id}`} className="py-1 px-4 rounded hover:text-white hover:bg-[#0DBC95] border transition-all text-black bg-white">Details</Link>
                     </div>
                 </div>
             </div>

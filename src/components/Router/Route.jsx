@@ -30,7 +30,7 @@ const myCreateRoute = createBrowserRouter([
             {
                 path:'/allJobs',
                 element:<AllJobs></AllJobs>,
-                loader: () => fetch("http://localhost:5001/v1/jobs"),
+                loader: () => fetch("https://job-protal-server.vercel.app/v1/jobs"),
             },
             {
                 path:'/appliedJobs',
@@ -59,7 +59,7 @@ const myCreateRoute = createBrowserRouter([
             {
                 path:'/v1/details/:id',
                 element:<PrivateRoute><JobDetail></JobDetail></PrivateRoute>,
-                loader: () => fetch("http://localhost:5001/v1/jobs"),
+                loader: () => fetch("https://job-protal-server.vercel.app/v1/jobs"),
             }
            
         ]

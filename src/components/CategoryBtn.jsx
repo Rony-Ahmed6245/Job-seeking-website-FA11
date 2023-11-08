@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 const CategoryBtn = ({ menuItems, filterItem, filteredJobs }) => {
     return (
         <div>
-            <div className="flex gap-10 justify-between items-center my-14">
+            <div className="md:flex gap-10 justify-between items-center my-14">
                 <h1 className="text-2xl text-[#0DBC95] font-bold">Category Jobs: {filteredJobs.length}</h1>
-                <div className="flex gap-4">
+                <div className="md:flex gap-4">
                     <button onClick={() => filterItem("All")} className="btn bg-[#0DBC95] text-white rounded">
                         All
                     </button>

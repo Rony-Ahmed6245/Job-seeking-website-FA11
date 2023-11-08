@@ -10,7 +10,7 @@ const FutureJobs = () => {
 
     // Load data 
     useEffect(() => {
-        fetch("http://localhost:5001/v1/jobs")
+        fetch("https://job-protal-server.vercel.app/v1/jobs")
             .then(res => res.json())
             .then(data => {
                 setJobs(data);
