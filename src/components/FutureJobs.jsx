@@ -43,7 +43,7 @@ const FutureJobs = () => {
                     filteredJobs={filteredJobs}
                 ></CategoryBtn>
                 {/* Jobs */}
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {filteredJobs?.map(item => (
                         <JobCard
                             key={item._id}

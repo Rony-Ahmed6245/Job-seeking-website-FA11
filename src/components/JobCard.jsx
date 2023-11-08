@@ -1,20 +1,34 @@
-
+import { BsHeartFill } from "react-icons/bs";
 
 const JobCard = ({ item }) => {
     console.log(item);
-    const  { name, salary, category, date: currentDate, deadline, applicantNo, jobTitle, dsc, photo, banner }= item || {}
+    const { name, salary, category, date: currentDate, deadline, applicantNo, jobTitle, dsc, photo, banner } = item || {}
     return (
         <div>
             <div>
                 {/* card */}
-                <div className="card mt-10 bg-base-100 shadow-xl">
-                    <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
-                    <div className="card-body">
-                        <h2 className="card-title">{name}</h2>
-                        <p>If a dog chews shoes whose shoes does he choose?</p>
-                        <div className="card-actions justify-end">
-                            <button className="btn btn-primary">Buy Now</button>
+                <div className="border p-4 rounded hover:shadow-md transition-all">
+                    <div className="flex justify-between">
+                        <div className="flex gap-3">
+                            <img className="w-[60px]" src={photo} alt="" />
+                            <div>
+                                <h1 className="font-bold text-xl uppercase ">{jobTitle}</h1>
+                                <h1 className="text-gray-400">{name}</h1>
+                                <h1 className="text-gray-400">{currentDate}</h1>
+                            </div>
                         </div>
+                        {/* icone */}
+                        <div className="">
+                            <BsHeartFill className="text-4xl p-2 rounded-full border  text-red-500"></BsHeartFill>
+                        </div>
+                    </div>
+                    <hr className="my-5" />
+                    <div className="flex justify-between items-center">
+                        <div>
+                            <h1 className="text-sm text-gray-500">$1000-${salary}/<span className="text-sm">month</span> </h1>
+                            <h1 className="text-sm  text-gray-500">Deadline:{deadline}</h1>
+                        </div>
+                        <button className="py-1 px-4 rounded hover:text-white hover:bg-[#0DBC95] border transition-all text-black bg-white">Details</button>
                     </div>
                 </div>
             </div>
