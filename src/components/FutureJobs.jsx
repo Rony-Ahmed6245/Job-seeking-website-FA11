@@ -35,7 +35,10 @@ const FutureJobs = () => {
     return (
         <div className="max-w-7xl mx-auto px-3">
             <div>
-                  {/* <h1 className="mt-10 text-2xl text-[#0DBC95] font-bold">Category Jobs: {filteredJobs.length}</h1> */}
+                  <h1 className="mt-10 text-3xl text-center  font-bold">Our Future jobs</h1>
+                  <p className="text-center text-gray-400">
+                  Resume-Library is a true performance-based job board. Enjoy custom hiring products and access <br /> to up to 10,000 new resume registrations daily,  with no subscriptions or user licences.
+                  </p>
                 {/* Category buttons */}
                 <CategoryBtn
                     menuItems={menuItems}

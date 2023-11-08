@@ -48,3 +48,9 @@ body {
   .br{
     border: 1px solid gray;
   }
+
+
+
+  .jobs:hover{
+    border: 1px solid #0DBC95;
+  }
