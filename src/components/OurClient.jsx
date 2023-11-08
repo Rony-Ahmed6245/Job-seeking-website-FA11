@@ -1,9 +1,17 @@
 import img from "../assets/3054596.jpg"
 import { BsFillStarFill } from "react-icons/bs";
+import { useEffect } from "react";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+
 
 const OurClient = () => {
+     // aos animation 
+     useEffect(()=>{
+        Aos.init({duration:3000})
+    },[])
     return (
-        <div className="space-y-3 py-5 max-w-screen-xl	 mx-auto md:px-2">
+        <div data-aos="zoom-in" className="space-y-3 py-5 max-w-screen-xl	 mx-auto md:px-2">
             <h1 className="text-center md:text-4xl text-3xl font-bold">What our clients are saying</h1>
             <p  className="text-center ">Showing companies based on reviews and recent job openings</p>
 

@@ -7,7 +7,7 @@ import { Helmet } from "react-helmet";
 
 const AllJobs = () => {
     const [search, setSearch] = useState('');
-    console.log(search);
+    // console.log(search);
     const data = useLoaderData();
     // console.log(data);
     const dynamicTitle = 'All Jobs';

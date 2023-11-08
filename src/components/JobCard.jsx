@@ -2,7 +2,7 @@ import { BsHeartFill, BsCalendar2Event, BsCoin } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 const JobCard = ({ item }) => {
-    console.log(item);
+    // console.log(item);
     const { _id, name, salary, category, date: currentDate, deadline, applicantNo, jobTitle, dsc, photo, banner } = item || {}
     return (
         <div>

@@ -1,8 +1,15 @@
 import { useState, useEffect } from "react";
 import CategoryBtn from "./CategoryBtn";
 import JobCard from "./JobCard";
-
+import Aos from "aos";
+import 'aos/dist/aos.css'
 const FutureJobs = () => {
+    // aos animation 
+    useEffect(()=>{
+        Aos.init({duration:3000})
+    },[])
+
+
     const [jobs, setJobs] = useState([]);
     const [filteredJobs, setFilteredJobs] = useState([]);
     const [menuItems, setMenuItems] = useState([]);
@@ -34,7 +41,7 @@ const FutureJobs = () => {
 
     return (
         <div className="max-w-7xl mx-auto px-3">
-            <div>
+            <div data-aos="zoom-in" >
                   <h1 className="mt-10 text-3xl text-center  font-bold">Our Future jobs</h1>
                   <p className="text-center text-gray-400">
                   Resume-Library is a true performance-based job board. Enjoy custom hiring products and access <br /> to up to 10,000 new resume registrations daily,  with no subscriptions or user licences.

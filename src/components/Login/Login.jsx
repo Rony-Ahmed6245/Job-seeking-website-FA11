@@ -14,7 +14,7 @@ const Login = () => {
     const dynamicTitle = 'Login';
     const { logIn, googleSignIn } = useContext(AuthContext);
     const location = useLocation();
-    console.log(location);
+    // console.log(location);
     const navigate = useNavigate()
     const [loginError, setLoginError] = useState()
     const [loginSuccess, setLoginSuccess] = useState()

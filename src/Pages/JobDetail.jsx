@@ -6,14 +6,14 @@ import { useLoaderData, useParams } from "react-router-dom";
 const JobDetail = () => {
     const dynamicTitle = 'Job Details';
     const data = useLoaderData();
-    console.log(data);
+    // console.log(data);
 
     const { id } = useParams()
-    console.log(id);
+    // console.log(id);
 
 
     const job = data.find((item) => item._id === id);
-    console.log(job);
+    // console.log(job);
     const { name, salary, category, date: currentDate, deadline, applicantNo, jobTitle, dsc, photo, banner } = job || {}
 
 
@@ -30,7 +30,7 @@ const JobDetail = () => {
             {/* main part  */}
             <div className="grid md:grid-cols-5 grid-cols-1 gap-4">
                 <div className="md:col-span-3 p-4">
-                    <div className="flex justify-between items-center py-4">
+                    <div className="md:flex justify-between items-center py-4">
                         <div className="flex justify-center items-center gap-4 ">
                             <img className="w-[100px]" src={photo} alt="" />
                             <div className="space-y-2">
