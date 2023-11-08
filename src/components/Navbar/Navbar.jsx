@@ -123,11 +123,11 @@ const Navbar = () => {
                                 <label tabIndex={1} className="btn btn-ghost lg:hidden flex-col ">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-[50px] text-black w-[50px]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                                 </label>
-                                <ul tabIndex={0} className=" menus menu-sm dropdown-content bg-white  py-6 border z-[10]   px-4  -left-20 ">
+                                <ul tabIndex={0} className=" menus menu-sm dropdown-content space-y-4 py-10 rounded  bg-white design   z-[10]    -left-20 ">
                                     <p className=" px-3">{home}</p>
                                     <p className="uppercase  px-3">{alljobs}</p>
                                     <p className="uppercase  px-3">{blog}</p>
-                                    <li className="">
+                                    <li className="space-y-4">
                                         {
                                             user ? <>
                                                 <p className="uppercase  px-3">{appliedJobs}</p>
@@ -149,7 +149,7 @@ const Navbar = () => {
                         </div>
                         <div className="navbar-center hidden lg:flex">
                             <ul className=" menu-horizontal flex items-center px-4 gap-2 lg:gap-5  text-white font-medium md:font-bold">
-                                <div className="ml-auto gap-5 flex md:mx-[100px] lg:mx-[250px] font-medium">
+                                <div className="ml-auto gap-5 flex md:mx-[80px] lg:mx-[150px] font-medium">
                                     <li className="">{home}</li>
                                     <li className="">{alljobs}</li>
                                     <li className="">{blog}</li>
