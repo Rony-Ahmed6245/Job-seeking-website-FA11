@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet";
-import { useLoaderData, useParams } from "react-router-dom";
+import { Link, useLoaderData, useParams } from "react-router-dom";
 // import banne from "../assets/banner-detail.jpg"
 // import logo from "../assets/e3.png"
 
@@ -14,7 +14,7 @@ const JobDetail = () => {
 
     const job = data.find((item) => item._id === id);
     // console.log(job);
-    const { name, salary, category, date: currentDate, deadline, applicantNo, jobTitle, dsc, photo, banner } = job || {}
+    const {_id, name, salary, category, date: currentDate, deadline, applicantNo, jobTitle, dsc, photo, banner } = job || {}
 
 
 
@@ -40,7 +40,7 @@ const JobDetail = () => {
                             </div>
                         </div>
                         <div className="text-end space-y-2">
-                            <button className="bg-[#14A077] py-2 px-14 rounded font-semibold text-white">Apply Now</button>
+                            <Link to={`/v1/applied/${_id}`} className="bg-[#14A077] py-2 px-14 rounded font-semibold text-white">Apply Now</Link>
                             <h1 className="text-black font-bold"> <span className="text-red-400 py-1 px-3 rounded-md">Deadline Date:</span> {deadline} </h1>
                             <h1 className="text-[15px] font-semibold">$1000 - ${salary}/month </h1>
                         </div>

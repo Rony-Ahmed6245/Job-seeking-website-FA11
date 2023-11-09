@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import AddaJobs from "../../Pages/AddaJobs";
 import AllJobs from "../../Pages/AllJobs";
 import AppliedJobs from "../../Pages/AppliedJobs";
+import AppliedPage from "../../Pages/AppliedPage";
 import Blog from "../../Pages/Blog";
 import ErrorPage from "../../Pages/ErrorPage";
 import Home from "../../Pages/Home";
@@ -34,7 +35,8 @@ const myCreateRoute = createBrowserRouter([
             },
             {
                 path:'/appliedJobs',
-                element:<AppliedJobs></AppliedJobs>,
+                element:<PrivateRoute><AppliedJobs></AppliedJobs></PrivateRoute>,
+                loader:()=> fetch("https://job-protal-server.vercel.app/v1/applyJob")
             },
             {
                 path:'/addAjobs',
@@ -60,7 +62,12 @@ const myCreateRoute = createBrowserRouter([
                 path:'/v1/details/:id',
                 element:<PrivateRoute><JobDetail></JobDetail></PrivateRoute>,
                 loader: () => fetch("https://job-protal-server.vercel.app/v1/jobs"),
-            }
+            },
+            {
+                path:'/v1/applied/:id',
+                element:<PrivateRoute><AppliedPage></AppliedPage></PrivateRoute>,   
+            },
+           
            
         ]
     }

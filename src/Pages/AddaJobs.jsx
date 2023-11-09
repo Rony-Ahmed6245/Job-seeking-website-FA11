@@ -24,7 +24,7 @@ const handleJobsData = async (e) => {
 
     const formData = { name, salary, category, date: currentDate, deadline, applicantNo, jobTitle, dsc, photo, banner };
     console.log(formData);
-    fetch("http://localhost:5001/v1/job", {
+    fetch("https://job-protal-server.vercel.app/v1/job", {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
