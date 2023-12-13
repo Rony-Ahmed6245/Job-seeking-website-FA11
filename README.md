@@ -13,6 +13,12 @@ Server side github link: https://github.com/Porgramming-Hero-web-course/b8a11-se
             4.MongoDB <br> 
             5.NodeJS and <br>
             6.ExpressJs etc <br> 
+   <h3 align="center">---Unique feature ---</h3>  
+             i.	Your end-to-end hiring platform section in the website home page . <br>
+            ii.	What our client are saying section in the website home page . <br>
+           iii.	A Fantastic block page. <br>
+<br>
+           
    <h3 align="center">---Project features ---</h3> 
             <img src="https://i.ibb.co/Xj4JJg1/Screenshot-2023-11-08-211136.png" alt="" />
             <h1>Add at least 5 Project features in my job portal website</h1>
