@@ -1,10 +1,19 @@
 
 <div>
 <h1>Assignment ID: assignment_category_0003</h1>
+  <h3 align="center">---All necessary links ---</h3>      
 Website live link: https://fir-web-8c464.web.app/ </br>
 Client Side github link: https://github.com/Porgramming-Hero-web-course/b8a11-client-side-Rony-Ahmed6245.git </br>
 Server side github link: https://github.com/Porgramming-Hero-web-course/b8a11-server-side-Rony-Ahmed6245.git </br>
- live link is not working browser protected mode insure browser standard mode and check it</h1>
+</h1>
+   <h3 align="center">---Used Technology ---</h3>  
+             1.React <br>
+            2.React Router dom <br>
+            3.Tailwind css & deyisUI <br>
+            4.MongoDB <br> 
+            5.NodeJS and <br>
+            6.ExpressJs etc <br> 
+   <h3 align="center">---Project features ---</h3> 
             <img src="https://i.ibb.co/Xj4JJg1/Screenshot-2023-11-08-211136.png" alt="" />
             <h1>Add at least 5 Project features in my job portal website</h1>
             <h3>1/Feature: Website future job section </h3>
